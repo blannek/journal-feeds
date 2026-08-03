@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Journal of Chemical Theory and Computation - New Articles</title>
+    <link>https://pubs.acs.org/journal/jctcce</link>
+    <description>Unofficial feed of new Journal of Chemical Theory and Computation articles, built from Crossref metadata.</description>
+    <lastBuildDate>Mon, 03 Aug 2026 09:56:16 +0000</lastBuildDate>
+    <item>
+      <title>Resource-Efficient Quantum Algorithms for Selected Hamiltonian Subspace Diagonalization</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00521</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00521</guid>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Vincent Graves, Manqoba Q. Hlatshwayo, Theodoros Kapourniotis, Konstantinos Georgopoulos</description>
+    </item>
+    <item>
+      <title>Branched Ionizable Lipids Drive Cholesterol Domain Formation and pH-Dependent Remodeling in Lipid Nanoparticles</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00869</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00869</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Akhil Pratap Singh, Grzegorz Łazarski, Yusuke Miyazaki, Shusaku Nagano, Wataru Shinoda</description>
+    </item>
+    <item>
+      <title>Two-Factor Authentication of Dynamic Disorder for Computational Screening of High-Mobility Organic Semiconductors</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00533</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00533</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Andrey Yu. Sosorev, Mikhail V. Vener, Dmitry Yu. Paraschuk, Oleg G. Kharlanov</description>
+    </item>
+    <item>
+      <title>SURFXsim: Free-Energy Simulations of Spin-Forbidden Events with a Spin-Gap Collective Variable</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00796</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00796</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Ajmal Rahman Mullukkandy, Bernd Ensing, Carles Bo, Albert Solé-Daura</description>
+    </item>
+    <item>
+      <title>NNP/CG-MM: Embedding of All-Atom Neural Network Potentials into a Coarse-Grained Molecular Mechanics Environment</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00741</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00741</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Kuntal Ghosh, Gregory A. Voth</description>
+    </item>
+    <item>
+      <title>The Many-Electron Perspective on Local Spins and their Implication for Chemical Bonding</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00997</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00997</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Michel V. Heinz, Nicole Maser, Arne Lüchow</description>
+    </item>
+    <item>
+      <title>Comparative Assessment of DNA Force Fields for Small-Molecule Ligand Binding via Multicanonical MD-Based Dynamic Docking Simulations</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c01062</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c01062</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Gert-Jan Bekker, Yoshifumi Fukunishi, Junichi Higo, Narutoshi Kamiya</description>
+    </item>
+    <item>
+      <title>Parameterization of the PA Endonuclease Bimetallic Center Reveals the Dynamics of Clinically Relevant Mutations</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c01092</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c01092</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Luxuan Wang, Pengfei Li, Terra Sztain</description>
+    </item>
+    <item>
+      <title>Reliable Viscosity Calculation from High-Pressure Equilibrium Molecular Dynamics: Case Study of 2,2,4-Trimethylhexane</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00506</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00506</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Gözdenur Toraman, Dieter Fauconnier, Toon Verstraelen</description>
+    </item>
+    <item>
+      <title>Automated Active Space Selection with CASCI Dipole Moments</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00473</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00473</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Benjamin W. Kaufold, Sijia S. Dong</description>
+    </item>
+    <item>
+      <title>Differentiable Grand-Canonical Monte Carlo with Importance-Sampled Insertions for Gas Adsorption in Porous Materials</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00671</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00671</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Egor I. Tuzharov, Yury Maximov, Anastasia V. Bochenkova</description>
+    </item>
+    <item>
+      <title>A Hessian-Based Interpolation Method for Locating Transition Structures</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00180</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00180</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Matteo Tesselli, Frank Jensen</description>
+    </item>
+    <item>
+      <title>Time-Resolved X-ray Photoelectron Spectroscopy: Probing Bond Order Rearrangements during Ultrafast Excited-State Intramolecular Proton Transfer</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c01053</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c01053</guid>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Victor M. Freixas, Axel Gomez, Yonghao Gu, Amke Nimmrich, Sergei Tretiak, Munira Khalil, Shaul Mukamel, Niranjan Govind</description>
+    </item>
+    <item>
+      <title>Fully Automatable Relative Binding Free Energy Calculations with Enhanced Sampling Using FAST/MBAR</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00963</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00963</guid>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Miroslav Suruzhon, Justina Ratkeviciute, Khaled Abdel-Maksoud, Anna Cavalleri, Michael S. Bodnarchuk, Antonella Ciancetta, Ian D. Wall, Jonathan W. Essex</description>
+    </item>
+    <item>
+      <title>Refractory to Improvement: A Cautionary Tale of Two-Electron Densities Computed with One-Electron Basis Sets and of Their Employment in Quantum-Chemical Formalisms</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00413</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00413</guid>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Jerzy Cioslowski, Javier Domin, Eduard Matito</description>
+    </item>
+    <item>
+      <title>Free Energies of Solvation in Cyclohexane and Water: United-Atom vs All-Atom</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00989</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00989</guid>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
+      <description>William L. Jorgensen, Julian Tirado-Rives</description>
+    </item>
+    <item>
+      <title>Charge Transport in Solvated Donor–Acceptor Functionalized Peptoids: Molecular Dynamics and Rate Theory</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00787</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00787</guid>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Zongwei Huang, Bradley S. Harris, Slater T. Bakenhaster, Roshan Khatri, Margaret S. Cheung, Barry D. Dunietz, Marcel D. Baer, Eitan Geva</description>
+    </item>
+    <item>
+      <title>Relation-Aware Pretraining and Reaction Center Modeling for Chemical Reaction Graph Representation Learning</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00815</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00815</guid>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Jianbo Qiao, Kefei Li, Junru Jin, Ding Wang, Wenjia Gao, Shaoye Zhang, Shuan Liu, Leyi Wei</description>
+    </item>
+    <item>
+      <title>Dual-Coordinate Relative Free Energy Simulations Using Machine-Learned Interatomic Potentials</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00824</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00824</guid>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Anna Katharina Picha, Stefan Boresch</description>
+    </item>
+    <item>
+      <title>Why a Single Mutation Dims the Light: Local Chromophore Organization Modulates Fluorescence in smURFP</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c01008</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c01008</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Noureen Abdelrahman, Ding Ma, Campbell Ruffing, Eleftherios Mainas, Elisa Pieri</description>
+    </item>
+    <item>
+      <title>Assessing the Stability of Molecular Glues with Weighted Ensemble Simulations</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00319</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00319</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Seref Berk Atik, Alex Dickson</description>
+    </item>
+    <item>
+      <title>Accuracy Diagnostics for Natural Orbitals and Their Occupation Numbers from the Contracted Schrödinger Equation</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00876</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00876</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Jerzy Cioslowski, Krzysztof Strasburger</description>
+    </item>
+    <item>
+      <title>Upper Bounds on Gaussian Geminal Integrals</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00788</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00788</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Jong-Won Song, Peter M. W. Gill</description>
+    </item>
+    <item>
+      <title>Linear-Scaling Asymmetric Triples Correction through the Solution of the DLPNO–CCSD Lambda Equations: DLPNO–CCSD(T) &lt;sub&gt;Λ&lt;/sub&gt;</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00758</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00758</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Elizabeth C. Toth, Andy Jiang, Henry F. Schaefer</description>
+    </item>
+    <item>
+      <title>Efficient Algorithms for Analytical Gradients and Nonadiabatic Couplings of Second-Order Extended Multiconfiguration Quasi-Degenerate Perturbation Theory</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00565</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00565</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Yurii V. Bruyakin, Vladimir E. Bochenkov, Anastasia V. Bochenkova</description>
+    </item>
+    <item>
+      <title>Nodal Error behind Discrepancies between Coupled Cluster and Diffusion Monte Carlo</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00882</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00882</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <description>S. Lambie, P. López Ríos, D. Kats, A. Alavi</description>
+    </item>
+    <item>
+      <title>High-Fidelity Surrogate Framework for Rapid Solvation of Gas-Phase and Interfacial Reaction Potential Energy Surfaces</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00934</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00934</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Tevin Li, Junwei Lucas Bao</description>
+    </item>
+    <item>
+      <title>DDCCNet: Physics-Enhanced Multitask Neural Networks for Data-Driven Coupled-Cluster</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00906</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00906</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <description>P. D. Varuna S. Pathirage, Konstantinos D. Vogiatzis</description>
+    </item>
+    <item>
+      <title>Systematic Calibration of Pourbaix Diagrams of Organic Molecules</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00370</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00370</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Yaffet Zambrano-González, Martha M. Flores-Leonar, Humberto G. Laguna</description>
+    </item>
+    <item>
+      <title>Chalcogen Impurity Barriers in 2D Systems via Semi-Empirical/Machine Learning Modeling: A Survey of 4000 Materials</title>
+      <link>https://doi.org/10.1021/acs.jctc.6c00350</link>
+      <guid isPermaLink="false">10.1021/acs.jctc.6c00350</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <description>M. L. Pereira, M. G. E. da Luz, P. Cesana, A. L. da Rosa, M. J. Piotrowski, D. Guedes-Sobrinho, T. A. S. Pereira, E. A. Moujaes, A. C. Dias, R. M. Tromer</description>
+    </item>
+  </channel>
+</rss>

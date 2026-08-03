@@ -126,6 +126,8 @@ def build_index_html(journals):
 
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
+    # Tell GitHub Pages to skip its Jekyll build and serve files as-is.
+    open(os.path.join(OUT_DIR, ".nojekyll"), "a").close()
     for journal in JOURNALS:
         items = fetch_works(journal["issn"])
         rss = build_rss(journal, items)

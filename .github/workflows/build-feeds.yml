@@ -2,7 +2,7 @@ name: Build ACS journal feeds
 
 on:
   schedule:
-    - cron: "17 3 * * *"  # ~daily, off the top of the hour
+    - cron: "30 0 * * *"  # 00:30 UTC = 08:30 China Standard Time (UTC+8)
   workflow_dispatch: {}
 
 permissions:

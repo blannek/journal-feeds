@@ -105,25 +105,6 @@ def build_rss(journal, items):
 """
 
 
-def build_index_html(journals):
-    rows = "\n".join(
-        f'      <li><a href="{j["code"]}.xml">{escape(j["name"])}</a> '
-        f'(<code>{j["code"]}.xml</code>)</li>'
-        for j in journals
-    )
-    return f"""<!doctype html>
-<html>
-<head><meta charset="utf-8"><title>ACS Journal Feeds</title></head>
-<body>
-  <h1>ACS journal feeds (unofficial, Crossref-based)</h1>
-  <ul>
-{rows}
-  </ul>
-</body>
-</html>
-"""
-
-
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     # Tell GitHub Pages to skip its Jekyll build and serve files as-is.
@@ -135,9 +116,6 @@ def main():
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(rss)
         print(f"{journal['code']}: wrote {len(items)} items -> {out_path}")
-
-    with open(os.path.join(OUT_DIR, "index.html"), "w", encoding="utf-8") as f:
-        f.write(build_index_html(JOURNALS))
 
 
 if __name__ == "__main__":

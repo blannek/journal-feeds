@@ -30,16 +30,24 @@ jobs:
       - name: Build arXiv venue feeds
         run: python scripts/build_arxiv_feeds.py
 
+      # Each build step above still exits non-zero (and the job still shows
+      # as failed, so the failure email fires) if a single journal/venue
+      # keeps failing after its retries - but that shouldn't block the
+      # feeds that DID succeed from being published, so these two steps run
+      # regardless.
       - name: Build index page
+        if: always()
         run: python scripts/build_index.py
 
       - name: Upload Pages artifact
+        if: always()
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs
 
   deploy:
     needs: build
+    if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages

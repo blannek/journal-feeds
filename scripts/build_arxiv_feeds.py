@@ -16,6 +16,7 @@ signal available (venue sites like OpenReview block automated access).
 """
 import os
 import re
+import sys
 import time
 import urllib.error
 import urllib.parse
@@ -119,27 +120,38 @@ def build_rss(venue, items):
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     cutoff = datetime.now(timezone.utc) - timedelta(days=LOOKBACK_DAYS)
+    had_failure = False
 
     for i, venue in enumerate(VENUES):
         if i > 0:
             time.sleep(API_DELAY_SECONDS)
-        entries = fetch_entries(venue["keywords"])
 
-        items = []
-        for entry in entries:
-            comment = entry.findtext("arxiv:comment", default="", namespaces=NS) or ""
-            if "workshop" in comment.lower():
-                continue
-            item = build_item(entry)
-            if item["updated"] < cutoff:
-                continue
-            items.append(item)
+        try:
+            entries = fetch_entries(venue["keywords"])
+            items = []
+            for entry in entries:
+                comment = entry.findtext("arxiv:comment", default="", namespaces=NS) or ""
+                if "workshop" in comment.lower():
+                    continue
+                item = build_item(entry)
+                if item["updated"] < cutoff:
+                    continue
+                items.append(item)
+        except (urllib.error.URLError, ET.ParseError) as e:
+            # Don't let one persistently-failing venue block the others from
+            # publishing - write an empty feed for this one and move on.
+            print(f"{venue['code']}: FAILED after retries ({e}), publishing empty feed")
+            had_failure = True
+            items = []
 
         rss = build_rss(venue, items)
         out_path = os.path.join(OUT_DIR, f"{venue['code']}.xml")
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(rss)
         print(f"{venue['code']}: wrote {len(items)} items -> {out_path}")
+
+    if had_failure:
+        sys.exit(1)
 
 
 if __name__ == "__main__":

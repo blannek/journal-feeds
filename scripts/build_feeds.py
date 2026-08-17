@@ -9,6 +9,9 @@ redirects straight to the article's real pubs.acs.org page.
 """
 import json
 import os
+import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
@@ -27,6 +30,8 @@ ROWS = 60
 OUT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs")
 CONTACT_EMAIL = os.environ.get("FEED_CONTACT_EMAIL", "bruce.yang@genscript.com")
 USER_AGENT = f"acs-feed-builder/1.0 (personal RSS mirror; mailto:{CONTACT_EMAIL})"
+MAX_ATTEMPTS = 5
+RETRY_BACKOFF_SECONDS = 10  # doubles each retry: 10, 20, 40, 80
 
 
 def fetch_works(issn):
@@ -40,8 +45,20 @@ def fetch_works(issn):
     }
     url = f"https://api.crossref.org/journals/{urllib.parse.quote(issn)}/works?{urllib.parse.urlencode(params)}"
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        data = json.load(resp)
+
+    delay = RETRY_BACKOFF_SECONDS
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                data = json.load(resp)
+            break
+        except (urllib.error.URLError, json.JSONDecodeError) as e:
+            if attempt == MAX_ATTEMPTS:
+                raise
+            print(f"  attempt {attempt} failed ({e}), retrying in {delay}s")
+            time.sleep(delay)
+            delay *= 2
+
     items = data.get("message", {}).get("items", [])
     # Skip front-matter entries (issue mastheads, TOC pages, etc.) - these
     # have no authors, unlike real articles.
@@ -109,13 +126,26 @@ def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     # Tell GitHub Pages to skip its Jekyll build and serve files as-is.
     open(os.path.join(OUT_DIR, ".nojekyll"), "a").close()
+    had_failure = False
+
     for journal in JOURNALS:
-        items = fetch_works(journal["issn"])
+        try:
+            items = fetch_works(journal["issn"])
+        except (urllib.error.URLError, json.JSONDecodeError) as e:
+            # Don't let one persistently-failing journal block the others
+            # from publishing - write an empty feed for this one and move on.
+            print(f"{journal['code']}: FAILED after retries ({e}), publishing empty feed")
+            had_failure = True
+            items = []
+
         rss = build_rss(journal, items)
         out_path = os.path.join(OUT_DIR, f"{journal['code']}.xml")
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(rss)
         print(f"{journal['code']}: wrote {len(items)} items -> {out_path}")
+
+    if had_failure:
+        sys.exit(1)
 
 
 if __name__ == "__main__":

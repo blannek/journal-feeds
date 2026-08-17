@@ -17,6 +17,7 @@ signal available (venue sites like OpenReview block automated access).
 import os
 import re
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -39,6 +40,8 @@ OUT_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 CONTACT_EMAIL = os.environ.get("FEED_CONTACT_EMAIL", "bruce.yang@genscript.com")
 USER_AGENT = f"arxiv-venue-feed-builder/1.0 (personal RSS mirror; mailto:{CONTACT_EMAIL})"
 API_DELAY_SECONDS = 3  # arXiv's requested minimum gap between requests
+MAX_ATTEMPTS = 5
+RETRY_BACKOFF_SECONDS = 10  # doubles each retry: 10, 20, 40, 80
 
 
 def fetch_entries(keywords):
@@ -51,10 +54,19 @@ def fetch_entries(keywords):
     }
     url = f"https://export.arxiv.org/api/query?{urllib.parse.urlencode(params)}"
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        body = resp.read()
-    root = ET.fromstring(body)
-    return root.findall("a:entry", NS)
+
+    delay = RETRY_BACKOFF_SECONDS
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                body = resp.read()
+            return ET.fromstring(body).findall("a:entry", NS)
+        except (urllib.error.URLError, ET.ParseError) as e:
+            if attempt == MAX_ATTEMPTS:
+                raise
+            print(f"  attempt {attempt} failed ({e}), retrying in {delay}s")
+            time.sleep(delay)
+            delay *= 2
 
 
 def parse_dt(text):

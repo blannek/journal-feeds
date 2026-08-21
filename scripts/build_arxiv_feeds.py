@@ -62,7 +62,10 @@ def fetch_entries(keywords):
             with urllib.request.urlopen(req, timeout=30) as resp:
                 body = resp.read()
             return ET.fromstring(body).findall("a:entry", NS)
-        except (urllib.error.URLError, ET.ParseError) as e:
+        except (urllib.error.URLError, OSError, ET.ParseError) as e:
+            # OSError also catches socket.timeout/TimeoutError and
+            # connection-reset errors, which urlopen doesn't always wrap
+            # as URLError.
             if attempt == MAX_ATTEMPTS:
                 raise
             print(f"  attempt {attempt} failed ({e}), retrying in {delay}s")
@@ -137,7 +140,7 @@ def main():
                 if item["updated"] < cutoff:
                     continue
                 items.append(item)
-        except (urllib.error.URLError, ET.ParseError) as e:
+        except (urllib.error.URLError, OSError, ET.ParseError) as e:
             # Don't let one persistently-failing venue block the others from
             # publishing - write an empty feed for this one and move on.
             print(f"{venue['code']}: FAILED after retries ({e}), publishing empty feed")

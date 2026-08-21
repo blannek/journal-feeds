@@ -52,7 +52,7 @@ def fetch_works(issn):
             with urllib.request.urlopen(req, timeout=30) as resp:
                 data = json.load(resp)
             break
-        except (urllib.error.URLError, json.JSONDecodeError) as e:
+        except (urllib.error.URLError, OSError, json.JSONDecodeError) as e:
             if attempt == MAX_ATTEMPTS:
                 raise
             print(f"  attempt {attempt} failed ({e}), retrying in {delay}s")
@@ -131,7 +131,7 @@ def main():
     for journal in JOURNALS:
         try:
             items = fetch_works(journal["issn"])
-        except (urllib.error.URLError, json.JSONDecodeError) as e:
+        except (urllib.error.URLError, OSError, json.JSONDecodeError) as e:
             # Don't let one persistently-failing journal block the others
             # from publishing - write an empty feed for this one and move on.
             print(f"{journal['code']}: FAILED after retries ({e}), publishing empty feed")
